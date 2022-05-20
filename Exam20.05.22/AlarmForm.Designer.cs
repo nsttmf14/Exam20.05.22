@@ -39,6 +39,7 @@ namespace Exam20._05._22
             this.NameTextBox = new System.Windows.Forms.TextBox();
             this.YesRadioButton = new System.Windows.Forms.RadioButton();
             this.NoRadioButton = new System.Windows.Forms.RadioButton();
+            this.MaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,12 +159,23 @@ namespace Exam20._05._22
             this.NoRadioButton.Text = "НЕТ";
             this.NoRadioButton.UseVisualStyleBackColor = true;
             // 
+            // MaskedTextBox
+            // 
+            this.MaskedTextBox.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MaskedTextBox.Location = new System.Drawing.Point(121, 75);
+            this.MaskedTextBox.Mask = "00:00";
+            this.MaskedTextBox.Name = "MaskedTextBox";
+            this.MaskedTextBox.Size = new System.Drawing.Size(82, 53);
+            this.MaskedTextBox.TabIndex = 3;
+            this.MaskedTextBox.ValidatingType = typeof(System.DateTime);
+            // 
             // AlarmForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(315, 316);
+            this.Controls.Add(this.MaskedTextBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.CancelButton);
@@ -172,6 +184,7 @@ namespace Exam20._05._22
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -187,5 +200,6 @@ namespace Exam20._05._22
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton NoRadioButton;
         private System.Windows.Forms.RadioButton YesRadioButton;
+        private System.Windows.Forms.MaskedTextBox MaskedTextBox;
     }
 }
